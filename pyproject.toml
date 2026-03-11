@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "travel-agent-tutorial"
+version = "0.1.0"
+description = "Tutorial-first DeepSeek + AutoNavi travel agent scaffold with LangChain, Skills, and MCP seams."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain>=0.3.27",
+  "langchain-openai>=0.3.28",
+  "openai>=1.109.1",
+  "pydantic-settings>=2.10.1",
+  "requests>=2.32.5",
+  "typer>=0.16.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4.2",
+]
+
+[project.scripts]
+travel-agent = "travel_agent.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/travel_agent"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

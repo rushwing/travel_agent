@@ -1,0 +1,11 @@
+{
+  "name": "weekend_city_planner",
+  "description": "Use this skill when the user wants a short city itinerary grounded in weather, travel pace, and realistic district-to-district movement.",
+  "tags": [
+    "travel",
+    "weekend",
+    "itinerary",
+    "weather"
+  ]
+}
+
