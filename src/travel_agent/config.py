@@ -25,14 +25,17 @@ class Settings(BaseSettings):
 
     @property
     def has_llm_credentials(self) -> bool:
+        """Step 2 report whether the DeepSeek credential is configured."""
         return bool(self.deepseek_api_key)
 
     @property
     def has_map_credentials(self) -> bool:
+        """Step 2 report whether the AutoNavi credential is configured."""
         return bool(self.autonavi_api_key)
 
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
-    return Settings()
-
+    """Step 2 construct and cache the application settings object."""
+    settings = Settings()
+    return settings

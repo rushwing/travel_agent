@@ -20,9 +20,11 @@ def _parse_skills(skills: str) -> Sequence[str]:
 
 @app.command()
 def doctor() -> None:
-    """Print configuration status without making external calls."""
-    report = TravelAgentApp().doctor()
-    typer.echo(json.dumps(report, indent=2, sort_keys=True))
+    """Step 2 wire the doctor command to the application health report."""
+    travel_app = TravelAgentApp()
+    results = travel_app.doctor()
+    for name, value in results.items():
+        print(f"TravelApp ready check -> {name}: {value}.")
 
 
 @app.command()
@@ -54,12 +56,14 @@ def list_skill_bundles() -> None:
 
 @app.command()
 def ask(question: str, skills: str = "") -> None:
-    """Ask the travel agent a single question."""
-    result = TravelAgentApp().ask(question, skill_names=_parse_skills(skills))
-    typer.echo(result["output"])
+    """Future step: invoke the travel agent once the tool loop is implemented."""
+    raise NotImplementedError(
+        "Future step: implement the ask CLI command after the agent loop is ready."
+    )
 
 
 def run() -> None:
+    """Step 2 expose the Typer application as the CLI entry point."""
     app()
 
 

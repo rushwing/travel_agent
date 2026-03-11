@@ -97,4 +97,6 @@ The implementation style for this tutorial is:
 
 ## Current step
 
-Start with [docs/steps/step-01-foundation.md](/Users/danielwong/Dev/travel_agent/docs/steps/step-01-foundation.md).
+Step 2 is complete.
+
+Continue with [docs/steps/step-03-autonavi-tools.md](/Users/danielwong/Dev/travel_agent/docs/steps/step-03-autonavi-tools.md).

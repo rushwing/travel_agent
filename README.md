@@ -16,10 +16,10 @@ Start with [docs/tutorial_plan.md](/Users/danielwong/Dev/travel_agent/docs/tutor
 ## Quickstart
 
 1. Copy `.env.example` to `.env`.
-2. Fill in `DEEPSEEK_API_KEY` and `AUTONAVI_API_KEY`.
+2. Apply for `DEEPSEEK_API_KEY` and `AUTONAVI_API_KEY`, then fill them into `.env`.
 3. Install dependencies with `uv sync`.
 4. Run `uv run python -m travel_agent.main doctor`.
-5. Follow [docs/steps/step-01-foundation.md](/Users/danielwong/Dev/travel_agent/docs/steps/step-01-foundation.md) before wiring the first agent loop.
+5. Continue with [docs/steps/step-03-autonavi-tools.md](/Users/danielwong/Dev/travel_agent/docs/steps/step-03-autonavi-tools.md) before wiring the first full agent loop.
 
 ## References
 
